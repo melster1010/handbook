@@ -1,0 +1,998 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.dandiarchive.org/handbook/10_using_dandi/">
+      
+      <link rel="icon" href="../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>Using DANDI - DANDI documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="dark-blue" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#working-with-dandi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DANDI documentation" class="md-header__button md-logo" aria-label="DANDI documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DANDI documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using DANDI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dandi/handbook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dandi/handbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DANDI documentation" class="md-nav__button md-logo" aria-label="DANDI documentation" data-md-component="logo">
+      
+  <img src="../img/dandi-logo-square_sw.png" alt="logo">
+
+    </a>
+    DANDI documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dandi/handbook/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dandi/handbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Using DANDI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Using DANDI
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dandi-components" class="md-nav__link">
+    DANDI components
+  </a>
+  
+    <nav class="md-nav" aria-label="DANDI components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-dandi-web-application" class="md-nav__link">
+    The DANDI Web application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-dandi-python-client" class="md-nav__link">
+    The DANDI Python client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-dandihub-analysis-platform" class="md-nav__link">
+    The Dandihub analysis platform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-from-dandi" class="md-nav__link">
+    Downloading from DANDI
+  </a>
+  
+    <nav class="md-nav" aria-label="Downloading from DANDI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#downloading-a-file" class="md-nav__link">
+    Downloading a file
+  </a>
+  
+    <nav class="md-nav" aria-label="Downloading a file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-web-application" class="md-nav__link">
+    Using the Web application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-python-cli" class="md-nav__link">
+    Using the Python CLI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-account-on-dandi" class="md-nav__link">
+    Create an account on DANDI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-a-dandiset" class="md-nav__link">
+    Uploading a Dandiset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storing-access-credentials" class="md-nav__link">
+    Storing Access Credentials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-a-dandiset" class="md-nav__link">
+    Publish a Dandiset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquiring-debugging-information" class="md-nav__link">
+    Acquiring Debugging Information
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_data_standards/" class="md-nav__link">
+        Data standards
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Developer Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20_project_structure/" class="md-nav__link">
+        Project structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../40_development/" class="md-nav__link">
+        Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/terms/" class="md-nav__link">
+        Terms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/policies/" class="md-nav__link">
+        Policies
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../100_about_this_doc/" class="md-nav__link">
+        About this doc
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dandi-components" class="md-nav__link">
+    DANDI components
+  </a>
+  
+    <nav class="md-nav" aria-label="DANDI components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-dandi-web-application" class="md-nav__link">
+    The DANDI Web application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-dandi-python-client" class="md-nav__link">
+    The DANDI Python client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-dandihub-analysis-platform" class="md-nav__link">
+    The Dandihub analysis platform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloading-from-dandi" class="md-nav__link">
+    Downloading from DANDI
+  </a>
+  
+    <nav class="md-nav" aria-label="Downloading from DANDI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#downloading-a-file" class="md-nav__link">
+    Downloading a file
+  </a>
+  
+    <nav class="md-nav" aria-label="Downloading a file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-web-application" class="md-nav__link">
+    Using the Web application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-python-cli" class="md-nav__link">
+    Using the Python CLI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-account-on-dandi" class="md-nav__link">
+    Create an account on DANDI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-a-dandiset" class="md-nav__link">
+    Uploading a Dandiset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storing-access-credentials" class="md-nav__link">
+    Storing Access Credentials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-a-dandiset" class="md-nav__link">
+    Publish a Dandiset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acquiring-debugging-information" class="md-nav__link">
+    Acquiring Debugging Information
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/dandi/handbook/edit/master/docs/10_using_dandi.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="working-with-dandi">Working with DANDI<a class="headerlink" href="#working-with-dandi" title="Permanent link">&para;</a></h1>
+<p>DANDI provides access to an archive that stores cellular neurophysiology
+datasets. We refer to such datasets as <code>Dandisets</code>.</p>
+<ol>
+<li>A <code>Dandiset</code> is organized in a structured manner to help users and
+software tools interact with it.</li>
+<li>Each <code>Dandiset</code> has a unique persistent identifier that you can use to go directly
+to the <code>Dandiset</code> (e.g., <a href="https://identifiers.org/DANDI:000004">https://identifiers.org/DANDI:000004</a>).
+You can use this identifier to cite the <code>Dandiset</code> in your publications or provide
+direct access to a <code>Dandiset</code>.</li>
+</ol>
+<h2 id="dandi-components">DANDI components<a class="headerlink" href="#dandi-components" title="Permanent link">&para;</a></h2>
+<h3 id="the-dandi-web-application">The DANDI Web application<a class="headerlink" href="#the-dandi-web-application" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://dandiarchive.org/">DANDI Web application</a> allows you to:</p>
+<ol>
+<li>Browse <code>Dandisets</code>.</li>
+<li>Search across <code>Dandisets</code>.</li>
+<li>Create an account to register a new <code>Dandiset</code> or gain access to
+<a href="#the-dandihub-analysis-platform">the Dandihub analysis platform</a>.</li>
+<li>Add collaborators to your <code>Dandiset</code>.</li>
+<li>Retrieve an <code>API key</code> to perform data upload to your <code>Dandisets</code>.</li>
+<li>Publish versions of your <code>Dandisets</code>.</li>
+</ol>
+<p>If you want to learn more, go to <a href="../11_using_dandi_web/">Working with DANDI Archive web</a></p>
+<h3 id="the-dandi-python-client">The DANDI Python client<a class="headerlink" href="#the-dandi-python-client" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://pypi.org/project/dandi/">DANDI Python client</a> allows you to:</p>
+<ol>
+<li>Download <code>Danidsets</code> and individual subject folders or files.</li>
+<li>Organize your data locally before upload.</li>
+<li>Upload <code>Dandisets</code>.</li>
+</ol>
+<h3 id="the-dandihub-analysis-platform">The Dandihub analysis platform<a class="headerlink" href="#the-dandihub-analysis-platform" title="Permanent link">&para;</a></h3>
+<p><a href="https://hub.dandiarchive.org">Dandihub</a> provides a Jupyter environment to
+interact with the DANDI archive. To use the hub, you will need to register an
+account using <a href="#the-dandi-web-application">the DANDI Web application</a>. Please
+note that <code>Dandihub</code> is not intended for significant computation, but provides a
+place to introspect <code>Dandisets</code> and files.</p>
+<h2 id="downloading-from-dandi">Downloading from DANDI<a class="headerlink" href="#downloading-from-dandi" title="Permanent link">&para;</a></h2>
+<p>You can download entire <code>Dandisets</code> or single files.</p>
+<h3 id="downloading-a-file">Downloading a file<a class="headerlink" href="#downloading-a-file" title="Permanent link">&para;</a></h3>
+<h4 id="using-the-web-application">Using the Web application<a class="headerlink" href="#using-the-web-application" title="Permanent link">&para;</a></h4>
+<p>Each <code>Dandiset</code> has a <code>View Data</code> option. This provides a folder-like view to
+navigate a <code>Dandiset</code>. Any file in the <code>Dandiset</code> has a download icon next to it.
+You can click this icon to download a file to your device where you are browsing
+or right click to get the download URL of the file. You can then use this URL
+programmatically or in other applications such as the <a href="https://nwbexplorer.opensourcebrain.org/">NWB Explorer</a>
+or in a <a href="https://hub.dandiarchive.org">Jupyter notebook on Dandihub</a>.</p>
+<h4 id="using-the-python-cli">Using the Python CLI<a class="headerlink" href="#using-the-python-cli" title="Permanent link">&para;</a></h4>
+<p>First install the Python client using <code>pip install dandi</code> in a Python 3.7+
+environment.</p>
+<ol>
+<li>Downloading a <code>Dandiset</code>, e.g.:
+<code>dandi download DANDI:000023</code></li>
+<li>Downloading data for a specific subject from a dandiset
+(names of the subjects could be found on the gui.dandiarchive.org website or by running <code>dandi ls -r DANDI:000023</code>), e.g.:
+<code>dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/draft/assets/?path=sub-P10HMH</code> or a specific version by replacing <code>draft</code> with it (e.g. <code>0.210914.1900</code> in the case of this dandiset)</li>
+<li>Downloading a specific file from a dandiset (a link for the specific file could be found on the gui.dandiarchive.org website), e.g.:
+<code>dandi download https://api.dandiarchive.org/api/dandisets/000023/versions/0.210914.1900/assets/1a93dc97-327d-4f9c-992d-c2149e7810ae/download/</code></li>
+</ol>
+<p>Hint: <code>dandi download</code> supports a number of resource identifiers to point to dandiset, folder, or file.  Providing an incorrect URL (e.g. <code>dandi download wrongurl</code>) will provide a list of supported identifiers.</p>
+<h2 id="create-an-account-on-dandi">Create an account on DANDI<a class="headerlink" href="#create-an-account-on-dandi" title="Permanent link">&para;</a></h2>
+<p>To create an account on DANDI, you will need to.</p>
+<ol>
+<li><a href="https://github.com/">Create a Github account</a> if you don't have one.</li>
+<li>Using your Github account <a href="https://gui.dandiarchive.org/#/user/register">register a DANDI account</a>.</li>
+<li>You will receive an email acknowledging activation of your account within 24
+hours. You can now login to DANDI using the Github by clicking on the login
+button.</li>
+</ol>
+<h2 id="uploading-a-dandiset">Uploading a Dandiset<a class="headerlink" href="#uploading-a-dandiset" title="Permanent link">&para;</a></h2>
+<p>DANDI provides a production server (http://dandiarchive.org/) for real data and an identical staging server 
+(https://gui-staging.dandiarchive.org/) for test data.
+When you create a dandiset, a permanent ID is automatically assigned to it.
+To prevent the production server from being inundated with test dandisets, we encourage developers to develop 
+against the staging server. The below instructions will alert you to where the commands for interacting with these 
+two different servers differ slightly. </p>
+<ol>
+<li>
+<p>Setup</p>
+<ul>
+<li>If you do not have a DANDI account, please <a href="#create-an-account-on-dandi">create an account</a></li>
+<li>Log in to DANDI and copy your API key. Click on your user initials on the
+top right after logging in. Production (dandiarchive.org) and staging (gui-staging.dandiarchive.org) servers have different API keys and different logins.</li>
+<li>
+<p>Locally</p>
+<ul>
+<li>Create a Python environment (not required, but strongly recommended, e.g., <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands">miniconda</a>,
+ <a href="https://docs.python.org/3/library/venv.html">virtualenv</a></li>
+<li>
+<p>Install the DANDI CLI into your Python environment</p>
+<pre><code>pip install -U dandi
+</code></pre>
+</li>
+<li>
+<p>Store your API key somewhere that the CLI can find it; see <a href="#storing-access-credentials">"Storing
+  Access Credentials"</a> below.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Data upload/management workflow</p>
+<ol>
+<li>Register a dandiset to generate an identifier. You will be asked to enter
+  basic metadata, a name (title) and description (abstract) for your dataset.
+  Click <code>NEW DANDISET</code> in the Web application (top right corner) after logging in. 
+  After you provide name and description, the dataset identifer will be created, 
+  we will call this <code>&lt;dataset_id&gt;</code>.</li>
+<li>
+<p>NWB format:</p>
+<ol>
+<li>Convert your data to NWB 2.1+ in a local folder. Let's call this <code>&lt;source_folder&gt;</code>
+This step can be complex depending on your data. Feel free to <a href="https://github.com/dandi/helpdesk/discussions">reach out to
+us for help</a>.</li>
+<li>Validate the NWB files by running: <code>dandi validate &lt;source_folder&gt;</code>. 
+<strong>If you are having trouble with validation, make sure the conversions were run with the most recent version of <code>PyNWB</code> and <code>MatNWB</code>.</strong></li>
+<li>
+<p>Preparing a dataset folder for upload:</p>
+<pre><code>dandi download https://dandiarchive.org/dandiset/&lt;dataset_id&gt;/draft
+cd &lt;dataset_id&gt;
+dandi organize &lt;source_folder&gt; -f dry
+dandi organize &lt;source_folder&gt;
+dandi upload  # for staging: dandi upload -i dandi-staging
+</code></pre>
+</li>
+<li>
+<p>Add metadata by visiting your dandiset landing page: 
+       <code>https://dandiarchive.org/dandiset/&lt;dataset_id&gt;/draft</code> and clicking on the <code>METADATA</code> link.</p>
+</li>
+<li>Use the dandiset URL in your preprint directly, or download it using the dandi CLI:
+    <code>dandi download https://dandiarchive.org/dandiset/&lt;dataset_id&gt;/draft</code><ol>
+<li>BIDS format:</li>
+</ol>
+</li>
+<li>Please <a href="https://github.com/dandi/helpdesk/discussions">reach out to Dandi team for help</a>.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="storing-access-credentials">Storing Access Credentials<a class="headerlink" href="#storing-access-credentials" title="Permanent link">&para;</a></h2>
+<p>By default, the DANDI CLI looks for an API key in the <code>DANDI_API_KEY</code>
+environment variable.  To set this on linux or osx, in run</p>
+<pre><code class="language-bash">export DANDI_API_KEY=personal-key-value
+</code></pre>
+<p>(note that there are no spaces around the "=").</p>
+<p>If this is not set, the CLI will look up the API
+key using the <a href="https://github.com/jaraco/keyring">keyring</a> library, which
+supports numerous backends, including the system keyring, an encrypted keyfile,
+and a plaintext (unencrypted) keyfile.</p>
+<ul>
+<li>
+<p>You can store your API key where the <code>keyring</code> library can find it by using
+  the <code>keyring</code> program: Run <code>keyring set dandi-api-dandi key</code> and enter the
+  API key when asked for the password for <code>key</code> in <code>dandi-api-dandi</code>.</p>
+</li>
+<li>
+<p>You can set the backend the <code>keyring</code> library uses either by setting the
+  <code>PYTHON_KEYRING_BACKEND</code> environment variable or by filling in <a href="https://github.com/jaraco/keyring#configuring">the <code>keyring</code>
+  library's configuration file</a>.
+  IDs for the available backends can be listed by running <code>keyring --list</code>.  If
+  no backend is specified in this way, the library will use the available
+  backend with the highest priority.</p>
+</li>
+</ul>
+<p>If the API key isn't stored in either the <code>DANDI_API_KEY</code> environment variable
+or in the keyring, the CLI will prompt you to enter the API key, and then it
+will store it in the keyring.  This may cause you to be prompted further; you
+may be asked to enter a password to encrypt/decrypt the keyring, or you may be
+asked by your OS to confirm whether to give the DANDI CLI access to the
+keyring.</p>
+<ul>
+<li>If the DANDI CLI encounters an error while attempting to fetch the API key
+  from the default keyring backend, it will fall back to using an encrypted
+  keyfile (the <code>keyrings.alt.file.EncryptedKeyring</code> backend).  If the keyfile
+  does not already exist, the CLI will ask you for confirmation; if you answer
+  "yes," the <code>keyring</code> configuration file (if does not already exist; see
+  above) will be configured to use <code>EncryptedKeyring</code> as the default backend.
+  If you answer "no," the CLI will exit with an error, and you must store the
+  API key somewhere accessible to the CLI on your own.</li>
+</ul>
+<h2 id="publish-a-dandiset">Publish a Dandiset<a class="headerlink" href="#publish-a-dandiset" title="Permanent link">&para;</a></h2>
+<p><strong>🛠 Work in progress 🛠</strong></p>
+<h2 id="acquiring-debugging-information">Acquiring Debugging Information<a class="headerlink" href="#acquiring-debugging-information" title="Permanent link">&para;</a></h2>
+<p>In the event that something goes wrong while using the <code>dandi</code> client, the
+first place to check for more information so that you can <a href="https://github.com/dandi/dandi-cli/issues">file a quality bug
+report</a> is the logs.  Every dandi
+command records a copy of its logs in a logfile, the location of which is
+reported to the user when the command finishes running.  The location of the
+logs varies by platform:</p>
+<ul>
+<li>Linux: <code>~/.cache/dandi-cli/log</code> or <code>$XDG_CACHE_HOME/dandi-cli/log</code></li>
+<li>macOS: <code>~/Library/Logs/dandi-cli</code></li>
+<li>Windows XP: <code>C:\Documents and Settings\&lt;username&gt;\Local Settings\Application Data\dandi\dandi-cli\Logs</code></li>
+<li>Windows Vista: <code>C:\Users\&lt;username&gt;\AppData\Local\dandi\dandi-cli\Logs</code></li>
+</ul>
+<p>Logs are named with a combination of the time at which the <code>dandi</code> command
+started running and the process ID of the command.</p>
+<p>Recent versions of <code>dandi</code> include all possible debugging information in the
+logs, but if you're using an older version, only log messages that were printed
+to the user when the command ran are recorded.  As a result, in order to get
+complete debugging information, you may have to rerun the problematic command,
+this time increasing the logging level by passing <code>-l DEBUG</code> or <code>--log-level
+DEBUG</code> on the command line.  Note that this option goes between the main
+<code>dandi</code> command and the name of the subcommand:</p>
+<pre><code># Right:
+dandi -l DEBUG upload
+
+# Wrong:
+dandi upload -l DEBUG
+</code></pre>
+<p>In addition, many commands can be put into a developer-specific mode for
+showing raw progress information instead of fancy progress bars.  For the
+<code>delete</code>, <code>organize</code>, <code>upload</code>, and <code>validate</code> commands, this can be done by
+setting the <code>DANDI_DEVEL</code> environment variable and passing <code>--devel-debug</code> to
+the command, like so:</p>
+<pre><code>DANDI_DEVEL=1 dandi upload --devel-debug
+</code></pre>
+<p>For the <code>download</code> command, the equivalent is the <code>-f debug</code>/<code>--format debug</code>
+option:</p>
+<pre><code>dandi download -f debug
+</code></pre>
+<p>More advanced users who are familiar with <a href="https://docs.python.org/3/library/pdb.html">the Python
+debugger</a> can instruct <code>dandi</code> to
+automatically open the debugger if any errors occur by supplying the <code>--pdb</code>
+option to the command.  Like the <code>-l</code>/<code>--log-level</code> option, the <code>--pdb</code> option
+must be placed between <code>dandi</code> and the name of the subcommand.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../01_introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../30_data_standards/" class="md-footer__link md-footer__link--next" aria-label="Next: Data standards" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data standards
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC-BY 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      
+    
+  </body>
+</html>
